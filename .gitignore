@@ -1,0 +1,17 @@
+# Ignore data that's not cleaned
+*.csv
+!data/clean_*.csv
+
+# Ignore virtual environments
+.venv/
+env/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
