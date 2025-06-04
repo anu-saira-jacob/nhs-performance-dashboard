@@ -17,11 +17,13 @@ NHS-Performance-Dashboard/
 ├── README.md        # Overview of the project
 └── .gitignore       # Tells Git which files/folders to ignore (e.g., raw data or temporary files)
 ```
-## Current Prototype
+## Current Prototype Files (Hosted on Google Drive)
 
-This dashboard was built using [Panel](https://panel.holoviz.org/) It visualises NHS England's performance data, focusing on referral-to-treatment (RTT) wait times and healthcare access disparities providing a regional performance comparison and service breakdown.
+This dashboard was built using [Panel](https://panel.holoviz.org/) It visualises NHS England's performance data, focusing on referral-to-treatment (RTT) wait times and healthcare access disparities providing a regional performance comparison and service breakdown. The notebook and exported HTML of the notebook contains the data exploratory steps, data cleaning, static map analysis as well as current dashboard prototype code and output.
 
-📄 [View the notebook](notebooks/nhs_dashboard_panel.ipynb)  
-🌐 [View the exported HTML](final_outputs/nhs_dashboard_panel.html)
+Due to GitHub’s file size limits, the following files are hosted externally:
+
+📄 [View the notebook](https://drive.google.com/file/d/19xUcODQmzShdZ8sbqDxH0jN0bI_elnYG/view?usp=drive_link)  
+🌐 [View the exported HTML](https://drive.google.com/file/d/19xUcODQmzShdZ8sbqDxH0jN0bI_elnYG/view?usp=drive_link)
 
 *Note: The final thesis version will be rebuilt using Dash for better performance and scalability.*
