@@ -1,0 +1,46 @@
+/* assets/global.css */
+
+/* Normalize-ish basics */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* Typography */
+body {
+  font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif;
+  color: #1f2937;
+}
+
+h1, h2, h3, h4 { color: #003a6d; font-weight: 700; margin-bottom: .5rem; }
+h5, h6 { color: #111827; font-weight: 600; }
+
+/* Plotly consistency */
+.js-plotly-plot .ytitle,
+.js-plotly-plot .xtitle,
+.js-plotly-plot .legendtitle text {
+  font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  fill: #374151 !important;
+}
+
+/* Optional: hide modebar */
+.js-plotly-plot .modebar { display: none !important; }
+
+/* Leaflet tooltip */
+.leaflet-tooltip {
+  font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif;
+  font-size: 12px;
+}
+
+
+/* Base */
+html, body { font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif; color: #1f2937; }
+
+/* Plotly figure text */
+.js-plotly-plot .gtitle,
+.js-plotly-plot .legend text,
+.js-plotly-plot .g-xtick text,
+.js-plotly-plot .g-ytick text,
+.js-plotly-plot .ytitle,
+.js-plotly-plot .xtitle {
+  font-family: Inter, "Segoe UI", Roboto, system-ui, sans-serif !important;
+}

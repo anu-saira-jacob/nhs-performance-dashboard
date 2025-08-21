@@ -1,0 +1,9 @@
+.leaflet-interactive.halo-outline {
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 2px white);
+}
+/* Remove focus outline on the map and vector layers (Edge/Chromium) */
+.leaflet-container:focus { outline: none !important; }
+.leaflet-interactive:focus { outline: none !important; }
+path.leaflet-interactive:focus { outline: none !important; }
+/* optional: links/controls inside the map */
+.leaflet-container a:focus { outline: none !important; }
