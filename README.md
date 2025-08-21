@@ -1,29 +1,78 @@
 # NHS Performance Dashboard
 
-An interactive dashboard for visualizing NHS performance metrics across England.  
-The project combines datasets such as referral-to-treatment waiting times, A&E admissions, avoidable mortality, and population deprivation levels to support data-driven insights.
+An interactive dashboard for exploring **Referral to Treatment (RTT) waiting times** across NHS England, built using [Dash](https://dash.plotly.com/).  
 
-The dashboard is currently in development. Initial stages involve dataset review, cleaning, and setting up the application structure.
+The dashboard tracks waiting-time performance across four RTT pathways:  
+- **Incomplete** (patients still waiting to start treatment)  
+- **Admitted** (patients treated with hospital admission)  
+- **Non-Admitted** (patients treated without admission)  
+- **New Referrals** (new RTT ‘clock starts’)  
+
+It provides interactive charts, regional comparisons, and deprivation analysis (linking NHS performance with Index of Multiple Deprivation scores).
+
+---
+
 
 ## Project Structure
 
 ```
-NHS-Performance-Dashboard/
-├── src/             # Python scripts (data loading, cleaning, visualization functions, Dash app files)
-├── notebooks/       # Jupyter notebooks for exploration, prototyping, and testing
-├── data/            # Final cleaned datasets that will be used for the dashboard
-├── final_outputs/   # Images, plots, exports, or dashboard screenshots for report/presentation
-├── docs/            # Project documentation (notes, diagrams, references, methodology)
-├── README.md        # Overview of the project
-└── .gitignore       # Tells Git which files/folders to ignore (e.g., raw data or temporary files)
+nhs-performance-dashboard/
+├── src/
+│ ├── app.py # Main Dash app entry point
+│ ├── assets/ # CSS, JavaScript, images, and static assets
+│ ├── callbacks/ # Dash callbacks for each RTT pathway
+│ ├── layouts/ # Page layouts for each RTT pathway
+│ ├── queries.py # Data query + transformation functions
+│ ├── utils/ # Helper functions, constants, and help text
+│ └── db.py # Database connections to postgres
+│
+├── notebooks/ # Jupyter notebooks for early exploration, and python ingestion scripts to load into db
+├── data/ # Cleaned datasets used in the dashboard
+├── final_outputs/ # Plots, screenshots, and exports
+├── docs/ # Documentation, notes, and methodology
+├── sql/ # SQL scripts to create database and tables for dashboard
+├── README.md # Project overview (this file)
+└── .gitignore # Ignore rules (envs, caches, raw data, etc.)
 ```
-## Current Prototype Files (Hosted on Google Drive)
 
-This dashboard was built using [Panel](https://panel.holoviz.org/) It visualises NHS England's performance data, focusing on referral-to-treatment (RTT) wait times and healthcare access disparities providing a regional performance comparison and service breakdown. The notebook and exported HTML of the notebook contains the data exploratory steps, data cleaning, static map analysis as well as current dashboard prototype code and output.
+---
 
-Due to GitHub’s file size limits, the following files are hosted externally:
+## Current Features
+
+- Separate **layouts and callbacks** for each RTT pathway.  
+- **Interactive visualisations** with Plotly (line charts, bar charts, scatter plots, maps).  
+- **Regional drilldowns** by NHS Region and Integrated Care Board (ICB).  
+- **Deprivation analysis** using 2019 IMD data, mapped to NHS geographies.  
+- Integrated **help text and contextual guidance** built into the dashboard.  
+- Modular structure (`callbacks/`, `layouts/`, `utils/`) for maintainability.  
+
+---
+
+## Initial Prototype (archived)
+
+The project began with a prototype built in [Panel](https://panel.holoviz.org/).  
+That prototype demonstrated NHS performance visualisation using static maps and charts, focusing on RTT waiting times and healthcare inequalities.  
+
+Due to GitHub file-size limits, the notebook and exported HTML are hosted externally:  
 
 📄 [View the notebook](https://drive.google.com/file/d/19xUcODQmzShdZ8sbqDxH0jN0bI_elnYG/view?usp=drive_link)  
-🌐 [View the exported HTML](https://drive.google.com/file/d/19xUcODQmzShdZ8sbqDxH0jN0bI_elnYG/view?usp=drive_link)
+🌐 [View the exported HTML](https://drive.google.com/file/d/19xUcODQmzShdZ8sbqDxH0jN0bI_elnYG/view?usp=drive_link)  
 
-*Note: The final thesis version will be rebuilt using Dash for better performance and scalability.*
+This prototype informed the design, but the final dashboard is being rebuilt in **Dash** for improved performance, modularity, and scalability.  
+
+---
+
+## Tech Stack
+
+- **Dash** (Plotly) for app framework  
+- **Plotly Express & Graph Objects** for charts  
+- **Dash Leaflet** for geographic visualisation  
+- **Dash Mantine Components** and **Dash Iconify** for UI and help features  
+- **Dash Bootstrap Components** for responsive layouts and styling  
+- **Pandas** for data wrangling  
+
+---
+
+## Example Output
+
+![Dashboard screenshot](final_outputs/home_page.png)
