@@ -25,6 +25,14 @@ nhs-performance-dashboard/
 │ ├── queries.py # Data query + transformation functions
 │ ├── utils/ # Helper functions, constants, and help text
 │ └── db.py # Database connections to postgres
+├── tests/
+│ ├── test_db.py # Test db connection 
+│ ├── test_home.py # Test home page callbacks
+│ ├── test_spatial_queries.py # Test spatial (geojsons, boundaries etc) queries
+│ ├── test_incomplete.py # Test incomplete page callbacks
+│ ├── test_admitted.py # Test admitted page callbacks [TO DO]
+│ ├── test_non_admitted.py # Test non-admitted page callbacks [TO DO]
+│ └── test_new_referrals.py # Test new-referrals page callbacks [TO DO]
 │
 ├── notebooks/ # Jupyter notebooks for early exploration, and python ingestion scripts to load into db
 ├── data/ # Cleaned datasets used in the dashboard
