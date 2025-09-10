@@ -1,5 +1,4 @@
 # Ignore data that's not cleaned
-*.csv
 !data/clean_*.csv
 
 # Ignore virtual environments
